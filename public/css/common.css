@@ -130,8 +130,12 @@ a {
 
 .tab-content2 {
   width: 100%;
-  display: block;
+  display: none;
   padding: 40px 40px;
+}
+
+.tab-content2.active {
+  display: block;
 }
 
 .tab-content2__item {
@@ -244,10 +248,4 @@ a {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
-}
-
-.box {
-    height: 100px;
-    width: 100px;
-    background-color: aquamarine;
 }
