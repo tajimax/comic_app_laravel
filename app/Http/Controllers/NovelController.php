@@ -8,8 +8,12 @@ use App\Models\Novel;
 class NovelController extends Controller
 {
     // 小説一覧を表示
-    public function showList() {        
-        return view('novel.list');
+    public function showList() {
+        $data = [
+            'title' => 'aaa',
+            'author' => '111'
+        ];
+        return view('novel.list', $data);
     }
 
     // 小説投稿画面を表示

@@ -13,7 +13,9 @@
 
 // 小説一覧画面を表示
 Route::get('/', 'NovelController@showList')->name('novels');
+// 小説一覧画面を表示
+Route::get('/novel/mypage', 'NovelController@showList')->name('mypage');
 // 小説登録画面を表示
-Route::get('/blog/create', 'NovelController@showCreate')->name('create');
+Route::get('/novel/create', 'NovelController@showCreate')->name('create');
 // 小説を登録
-Route::post('/blog/store', 'NovelController@exeStore')->name('store');
+Route::post('/novel/store', 'NovelController@exeStore')->name('store');

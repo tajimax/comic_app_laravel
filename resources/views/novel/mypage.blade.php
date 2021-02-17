@@ -10,10 +10,10 @@
         <div class="tab-content__item">
             <!-- コンテンツ部分 -->
             <div class="tab-content2 active" data-content="0">
-                @include('novel')
+                @include('my_novel_list')
             </div>
             <div class="tab-content2" data-content="1">
-                @include('comic')
+                @include('my_comic_list')                    
             </div>
         </div>
     </div>
