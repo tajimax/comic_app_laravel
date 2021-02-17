@@ -37,14 +37,24 @@ class NovelController extends Controller
         return view('novel.form');
     }
 
-    public function exeStore(Request $reqest) { 
-        $data = $reqest->all();
-        return view('novel.list', $data);
+    public function exeStore(Request $request) { 
+        $data = $request->all();
 
-        // Novel::create();
+        if($file = $request->file_name){
+        //保存するファイルに名前をつける    
+            $fileName = time().'.'.$file->getClientOriginalExtension();
+        //Laravel直下のpublicディレクトリに新フォルダをつくり保存する
+            $target_path = public_path('/uploads/');
+            $file->move($target_path,$fileName);
+        }else{
+        //画像が登録されなかった時はから文字をいれる
+            $name = "";
+        };
 
-        // \Session::flash('err_msg', '小説を投稿しました。');
-        // return redirect(route('novels'));
+        Novel::create($data);
+
+        \Session::flash('err_msg', '小説を投稿しました。');
+        return redirect(route('novels'));
     }
 }
 

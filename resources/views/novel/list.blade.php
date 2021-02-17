@@ -11,10 +11,10 @@
         <div class="tab-content__item">
             <!-- コンテンツ部分 -->
             <div class="tab-content2 active" data-content="0">
-                @include('novel_list')
+                @include('components.novel_list')
             </div>
             <div class="tab-content2" data-content="1">
-                @include('comic_list')
+                @include('components.comic_list')
             </div>
         </div>
     </div>

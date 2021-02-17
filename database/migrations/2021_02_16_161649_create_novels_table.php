@@ -17,10 +17,7 @@ class CreateNovelsTable extends Migration
             Schema::create('novels', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('title');
-                $table->string('author');
                 $table->string('genre');
-                $table->string('save_path');
-                $table->string('save_filename');
                 $table->timestamps();
             });
         }

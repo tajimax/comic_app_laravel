@@ -14,14 +14,14 @@
                             {{ $errors->first('title') }}
                         </div>
                     @endif
-                    <!-- <div class="upload__content">
-                        <input class="upload__form_item" type="file" accept="application/pdf" name="file">
+                    <div class="upload__content">
+                        <input class="upload__form_item" type="file" accept="application/pdf" name="file_name">
                     </div>
                     @if ($errors->has('file'))
                         <div class="text-danger">
                             {{ $errors->first('file') }}
                         </div>
-                    @endif -->
+                    @endif
                     <div class="upload__content">
                         <select class="upload__form_item" type="text" placeholder="ジャンル" name="genre">
                             <option disabled selected value>ジャンルを選択してください</option>
