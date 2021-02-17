@@ -16,6 +16,22 @@ class NovelController extends Controller
         return view('novel.list', $data);
     }
 
+    public function showMypage() {
+        $data = [
+            'title' => 'bbb',
+            'author' => '222'
+        ];
+        return view('novel.mypage', $data);
+    }
+
+    public function showOtherUserPage() {
+        $data = [
+            'title' => 'ccc',
+            'author' => '333'
+        ];
+        return view('novel.mypage', $data);
+    }
+
     // 小説投稿画面を表示
     public function showCreate() {
         return view('novel.form');

@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title', '作品一覧')
 @section('content')
 <div class="tab-wrapper" id="js-tab">
     <div class="tab-nav flex">
@@ -10,10 +11,10 @@
         <div class="tab-content__item">
             <!-- コンテンツ部分 -->
             <div class="tab-content2 active" data-content="0">
-                @include('novel')
+                @include('novel_list')
             </div>
             <div class="tab-content2" data-content="1">
-                @include('comic')
+                @include('comic_list')
             </div>
         </div>
     </div>

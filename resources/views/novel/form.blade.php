@@ -1,6 +1,5 @@
-@section('title', 'ブログ投稿')
-
 @extends('layout')
+@section('title', '作品投稿')
 @section('content')
 <div class="tab-wrapper" id="js-tab">
     <div class="tab-nav flex">
