@@ -11,7 +11,7 @@ class NovelController extends Controller
     public function showList() {
         $data = [
             'title' => 'aaa',
-            'author' => '111'
+            'genre' => 'eee'
         ];
         return view('novel.list', $data);
     }
@@ -26,7 +26,7 @@ class NovelController extends Controller
 
     public function showOtherUserPage() {
         $data = [
-            'title' => 'ccc',
+            'title' => 'ccc',   
             'author' => '333'
         ];
         return view('novel.mypage', $data);
@@ -38,12 +38,13 @@ class NovelController extends Controller
     }
 
     public function exeStore(Request $reqest) { 
-        dd($all = $reqest->all());
-        return;
-        Novel::create();
+        $data = $reqest->all();
+        return view('novel.list', $data);
 
-        \Session::flash('err_msg', '小説を投稿しました。');
-        return redirect(route('novels'));
+        // Novel::create();
+
+        // \Session::flash('err_msg', '小説を投稿しました。');
+        // return redirect(route('novels'));
     }
 }
 

@@ -5,7 +5,6 @@
         </div>
         <div class="posted-work__novel-content-wrapper">
             <a class="posted-work__ttl" href="#">{{$title}}</a>
-            <a class="posted-work__author" href="#">{{$author}}</a>
             <!-- <a class="posted-work__genre" href="#"></a> -->
         </div>
     </div>

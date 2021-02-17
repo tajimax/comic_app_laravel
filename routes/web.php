@@ -20,4 +20,4 @@ Route::get('/novel/otherUser', 'NovelController@showOtherUserPage')->name('other
 // 小説登録画面を表示
 Route::get('/novel/create', 'NovelController@showCreate')->name('create');
 // 小説を登録
-Route::post('/novel/store', 'NovelController@exeStore')->name('store');
+Route::post('/', 'NovelController@exeStore')->name('store');

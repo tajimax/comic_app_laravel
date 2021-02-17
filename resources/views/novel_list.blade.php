@@ -4,9 +4,8 @@
             <img class="posted-work__img" src="#">
         </div>
         <div class="posted-work__novel-content-wrapper">
-            <a class="posted-work__ttl" href="#"></a>
-            <a class="posted-work__author" href="#"></a>
-            <a class="posted-work__genre" href="#"></a>
+            <a class="posted-work__ttl" href="#">{{ $title }}</a>
+            <a class="posted-work__genre" href="#">{{ $genre }}</a>
         </div>
     </div>
 </div>
