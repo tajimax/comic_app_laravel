@@ -1,6 +1,8 @@
 @extends('layout')
 @section('title', 'マイページ')
 @section('content')
+<h2><?php echo $author ?>さんのページ</h2>
+
 <div class="tab-wrapper" id="js-tab">
     <div class="tab-nav flex">
         <div class="tab-nav__item active" data-nav="0">小説</div>

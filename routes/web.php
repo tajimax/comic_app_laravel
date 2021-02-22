@@ -21,3 +21,6 @@ Route::get('/novel/otherUser', 'NovelController@showOtherUserPage')->name('other
 Route::get('/novel/create', 'NovelController@showCreate')->name('create');
 // 小説を登録
 Route::post('/', 'NovelController@exeStore')->name('store');
+
+
+Route::get('person', 'PersonController@index');

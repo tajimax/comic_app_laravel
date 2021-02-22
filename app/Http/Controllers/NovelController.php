@@ -16,10 +16,10 @@ class NovelController extends Controller
         return view('novel.list', $data);
     }
 
-    public function showMypage() {
+    public function showMypage(Request $request) {
         $data = [
             'title' => 'bbb',
-            'author' => '222'
+            'author' => $request->author
         ];
         return view('novel.mypage', $data);
     }
@@ -42,9 +42,9 @@ class NovelController extends Controller
 
         if($file = $request->file_name){
         //保存するファイルに名前をつける    
-            $fileName = time().'.'.$file->getClientOriginalExtension();
+            $fileName = $file->getClientOriginalName();
         //Laravel直下のpublicディレクトリに新フォルダをつくり保存する
-            $target_path = public_path('/uploads/');
+            $target_path = public_path('/storage/');
             $file->move($target_path,$fileName);
         }else{
         //画像が登録されなかった時はから文字をいれる
